@@ -28,11 +28,11 @@
 
 # TODO
 
-* more features for dataset - there are a lot more indicators available from AlphaVantage - how many is too many - have to stay within API request rate limit and total per day for free account
+* more features for dataset - there are a lot more indicators available from AlphaVantage - how many is too many - have to stay within API request rate limit and total per day for free account until I prove this works....
 * validate that data from Alpha Vantage is available quickly enough to do a prediction for the following day's market open (should be, it has intraday APIs as part of premium package)
 * do some predictions based on existing model
 * automate model training so that if a prediciton for a given stock is not a 'buy' it gets data for and trains a new model for a different symbol (which I can trade)
-    * whole process is only about 15 mins so if this is done overnight there is a decent time window for training models for multiple stocks
+    * whole data gathering and training process is only about 15 mins with a decent CPU (and would be much faster if not using free Alpha vantage account) so if this is done overnight there is a decent time window for training models for multiple stocks
 * validate which stocks are available from Alpha Vantage - e.g. is FTSE etc. data there - less restrictive to trade FTSE than e.g. NASDAQ from the UK
 * identify broker to trade at (see assumptions) & open a trading account
     * determine which stocks can be traded via that broker and select data for only those symbols - feed into automation, see above
