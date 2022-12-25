@@ -28,7 +28,7 @@
 
 # TODO
 
-* **top priority** initial model shows 93% accuracy but the data for the label is naturally imbalanced very heavily in favour of 0 (don't buy) - need to determine accuracy of 1 (buy) predictions
+* **top priority** initial model shows 93% accuracy but the data for the label is naturally imbalanced very heavily in favour of 0 (don't buy) - need to determine accuracy of 1 (buy) predictions - the mean of the buy column is 0.069278 so this suggests about 7% are buys, hence these could all be wrong.....
 * more features for dataset - there are a lot more indicators available from AlphaVantage - how many is too many - have to stay within API request rate limit and total per day for free account until I prove this works....
 * validate that data from Alpha Vantage is available quickly enough to do a prediction for the following day's market open (should be, it has intraday APIs as part of premium package)
 * do some predictions based on existing model
