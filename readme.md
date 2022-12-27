@@ -29,8 +29,10 @@
 # TODO
 
 * **top priority** initial model shows 93% accuracy but the data for the label is naturally imbalanced very heavily in favour of 0 (don't buy) - need to determine accuracy of 1 (buy) predictions
-    * Accuracy is not the right thing to be validating models on - since we have relatively lots of time and stocks available to work with, we care about true positives primarily (i.e. how many times the model correctly predicted a buy) - therefore use precision as the evalutation metric - ths assumes Autogluon is treating 1 (buy) as positive - validate
+    * Accuracy is not the metric thing to be evalutating models on - since we have relatively lots of time and stocks available to work with, and we really care about buying something that will go up, we care about true positives primarily (i.e. how many times the model correctly predicted a buy) - therefore use **precision** as the evalutation metric - ths assumes Autogluon is treating 1 (buy) as positive - validate
 * more features for dataset - there are a lot more indicators available from AlphaVantage - how many is too many - have to stay within API request rate limit and total per day for free account until I prove this works....
+    * get positive and negative number for volume rather than just absolute number - can this be expressed as percentage of total stock as well?
+    * more sophisticated ways of representing things like bollinger bands within the features?
 * validate that data from Alpha Vantage is available quickly enough to do a prediction for the following day's market open (should be, it has intraday APIs as part of premium package)
 * do some predictions based on existing model
 * automate model training so that if a prediciton for a given stock is not a 'buy' it gets data for and trains a new model for a different symbol (which I can trade)
