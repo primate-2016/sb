@@ -2,12 +2,13 @@
 
 * one buy and sell per day of a stock
     * buy will be placed before market open
-    * an automatic sell will be placed if the stock goes up by the predicted 2% (don't get greedy....)
+    * an automatic sell will be placed if the stock goes up by the predicted 1 to 2% (don't get greedy....)
     * otherwise it will be sold at or close to market close to release funds for the next day
     * a stop loss will be placed of e.g. 2% to limit downside (this has the risk of missing upside if stock is volatile but is probably best in the long term)
 * The prediction will be right more than it is wrong
     * only need to be right 51% of the time to make a long term profit, but aim for much higher than 51%!!!
-* a relatively conservative upside being the target e.g. 2% - the higher I shoot for logically this suggests higher volatility and so a less reliable prediction (the model can be tested with different % of course....)
+* a relatively conservative upside being the target e.g. 1 to 2% - the higher I shoot for logically this suggests higher volatility and so a less reliable prediction (the model can be tested with different % of course....could cycle through multiple values to see which gives the best validation score before choosing a stock to trade)
+    * basic experimentation with model training seems to confirm this is true - looking for 1% up side seems to be way easier to predict than 2% and so on
 * keep prediction simplistic i.e. binary classification for a single stock - I'm not a high frequency trading house....
 * compound 2% increase leads to a massive return over time
 
